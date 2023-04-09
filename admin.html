@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== Iconscout CSS ===== -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="/dist/css/form-register.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css">
+  <title>Login & Registration Form</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="data" class="forms">
+      <!-- Registration Form -->
+      <div class="form signup">
+        <span class="title">Admin</span>
+
+        <form id="data" class="user">
+          <div class="input-field">
+            <input id="fname" type="text" placeholder="Enter your name" required>
+            <i class="uil uil-user"></i>
+          </div>
+          <div class="input-field">
+            <input id="lname" type="text" placeholder="Enter your name" required>
+            <i class="uil uil-user"></i>
+          </div>
+          <div class="input-field">
+            <input id="email" type="text" placeholder="Enter your email" required>
+            <i class="uil uil-envelope icon"></i>
+          </div>
+          <div class="input-field">
+            <input id="password" type="password" class="password" placeholder="Create a password" required>
+            <i class="uil uil-lock icon"></i>
+          </div>
+          <div class="input-field">
+            <label for="country">Country</label>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="indonesia">Indonesia</option>
+                <option value="singapore">Singapore</option>
+                <option value="Philippines">Philippines</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-field">
+            <label for="country">Courses</label>
+            <div class="col-75">
+              <select id="course" name="course">
+                <option value="javascript">JavaScript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-field button">
+            <input type="submit" value="Submit" id="submit" title="Submit" onclick="manageData()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Data Table</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <td>No</td>
+                      <td>First Name</td>
+                      <td>Last Name</td>
+                      <td>Email</td>
+                      <td>Password</td>
+                      <td>Country</td>
+                      <td>Courses</td>
+                      <td>Edit/Delete</td>
+                    </tr>
+                  </thead>
+                  <tbody id="root">
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+  </div>
+</body>
+<script src="../../javascript.js"></script>
+<script src="../../plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../../plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="../../plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="../../plugins/moment/moment.min.js"></script>
+  <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../javascript.js"></script>
+<script>
+
+
+</script>
+
+</html>
